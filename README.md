@@ -174,13 +174,17 @@ export class UserDTO {
 // Create with all properties
 const user = new UserDTO({
   Id: 1,
-  Name: "Mar John Cornelio",
-  Email: "john@example.com",
+  Name: "Juan Dela Cruz",
+  Email: "juandelacruz@example.com",
   IsActive: true,
 });
 
 // Create with partial properties
-const draft = new UserDTO({ name: "Jamela" });
+const draft = new UserDTO({
+  Name: "John Doe",
+  Email: "johndoe@example.com",
+  IsActive: false,
+});
 ```
 
 ---
