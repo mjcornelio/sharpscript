@@ -31,7 +31,17 @@ function ensureDir(dir: string) {
 
 /** Removes folder suffixes like DTO, DTOs, dto, dtos */
 function cleanFolderName(folderName: string) {
-  return folderName.replace(/dto(s)?$/i, "").toLowerCase();
+  const nameWithoutDto = folderName.replace(/dto(s)?$/i, "");
+
+  // Convert to camelCase
+  return nameWithoutDto
+    .split(/[\s-_]+/)
+    .map((word, index) =>
+      index === 0
+        ? word.charAt(0).toLowerCase() + word.slice(1)
+        : word.charAt(0).toUpperCase() + word.slice(1)
+    )
+    .join("");
 }
 
 /** Recursively collect all folders that contain .cs files */
