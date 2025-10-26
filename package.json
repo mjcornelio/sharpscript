@@ -1,0 +1,29 @@
+{
+  "name": "sharpscript",
+  "version": "1.0.1",
+  "description": "Convert C# DTOs and Enums to TypeScript interfaces automatically.",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "bin": {
+    "sharpscript": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [
+    "csharp",
+    "typescript",
+    "dto",
+    "generator",
+    "sharpscript"
+  ],
+  "author": "Mar John Cornelio",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
